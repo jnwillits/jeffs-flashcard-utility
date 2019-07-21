@@ -25,60 +25,71 @@ menu_def = [['Setup', ['Reset', 'Quit']],
             ]
 
 l_pad = 65
+frame_color = '#2a2a2a'
+
+f_frame_layout = [
+    [sg.T('', background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L0_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L1_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L2_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L3_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L4_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L5_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L6_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L7_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L8_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L9_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L10_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L11_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L12_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L13_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L14_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L15_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L16_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L17_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L18_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L19_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_F_L20_',background_color=frame_color)],
+]
+
+b_frame_layout = [
+    [sg.T('', background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L0_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L1_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L2_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L3_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L4_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L5_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L6_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L7_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L8_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L9_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L10_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L11_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L12_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L13_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L14_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L15_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L16_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L17_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L18_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L19_',background_color=frame_color)],
+    [sg.T('', size=(l_pad, 0), key='_B_L20_',background_color=frame_color)],
+]
 
 layout = [
     [sg.Menu(menu_def, tearoff=False, pad=(20, 1))],
     [sg.T('')],
     [sg.T('', text_color='#FFFAFA', size=(20, 0), key='_status1_'),
      sg.T('', text_color='#FFFAFA', size=(20, 0), key='_status2_')],
-    [sg.Text('_' * 127, text_color='#565656', size=(0, 1))],
+    # [sg.Text('_' * 127, text_color='#565656', size=(0, 1))],
     [sg.T('')],
+    [sg.Frame('Front', f_frame_layout, border_width=0, background_color=frame_color),sg.T('', size=(1, 0)),
+     sg.Frame('Back', b_frame_layout, border_width=0, background_color=frame_color),],
     [sg.T('')],
-    [sg.T('', size=(l_pad, 0), key='_F_L0_'),
-     sg.T('', size=(l_pad, 0), key='_B_L0_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L1_'),
-     sg.T('', size=(l_pad, 0), key='_B_L1_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L2_'),
-     sg.T('', size=(l_pad, 0), key='_B_L2_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L3_'),
-     sg.T('', size=(l_pad, 0), key='_B_L3_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L4_'),
-     sg.T('', size=(l_pad, 0), key='_B_L4_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L5_'),
-     sg.T('', size=(l_pad, 0), key='_B_L5_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L6_'),
-     sg.T('', size=(l_pad, 0), key='_B_L6_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L7_'),
-     sg.T('', size=(l_pad, 0), key='_B_L7_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L8_'),
-     sg.T('', size=(l_pad, 0), key='_B_L8_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L9_'),
-     sg.T('', size=(l_pad, 0), key='_B_L9_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L10_'),
-     sg.T('', size=(l_pad, 0), key='_B_L10_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L11_'),
-     sg.T('', size=(l_pad, 0), key='_B_L11_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L12_'),
-     sg.T('', size=(l_pad, 0), key='_B_L12_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L13_'),
-     sg.T('', size=(l_pad, 0), key='_B_L13_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L14_'),
-     sg.T('', size=(l_pad, 0), key='_B_L14_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L15_'),
-     sg.T('', size=(l_pad, 0), key='_B_L15_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L16_'),
-     sg.T('', size=(l_pad, 0), key='_B_L16_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L17_'),
-     sg.T('', size=(l_pad, 0), key='_B_L17_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L18_'),
-     sg.T('', size=(l_pad, 0), key='_B_L18_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L19_'),
-     sg.T('', size=(l_pad, 0), key='_B_L19_')],
-    [sg.T('', size=(l_pad, 0), key='_F_L20_'),
-     sg.T('', size=(l_pad, 0), key='_B_L20_')],
     [sg.Button('', visible=False, size=(60, 30), ), ],
-    [sg.T(800 * '      '), sg.T(''), sg.Button('Archive', button_color=('#FFFFFF', '#565656'), visible=True, pad=(0, 10),
-        size=(12, 1)), sg.T(''), sg.Button('Update', button_color=('#FFFFFF', '#565656'), visible=True, pad=(0, 10), size=(12, 1))], ]
+    [sg.T('', size=(95, 0)), sg.Button('Archive', button_color=('#FFFFFF', '#565656'), visible=True, pad=(0, 0),
+        size=(12, 1)), sg.Button('Next', button_color=('#FFFFFF', '#565656'), visible=True, pad=(40, 0), size=(12, 1))], ]
 
 
 def save_data_and_exit(active_cards_pass):
@@ -126,7 +137,7 @@ if __name__ == '__main__':
     cards=populate_data(ws, 'B', rows_per_card, cards, card_side=0)
     cards=populate_data(ws, 'D', rows_per_card, cards, card_side=1)
 
-    window=sg.Window(" Jeff's Flash Card System", size=(1080, 600), default_element_size=(30, 1), grab_anywhere=False,
+    window=sg.Window(" Jeff's Flash Card System", size=(1200, 600), default_element_size=(30, 1), grab_anywhere=False,
                        background_color='#1E1E1E', auto_size_text=False, auto_size_buttons=False).Layout(layout).Finalize()
 
     if os.path.isfile('cards.json'):
@@ -151,7 +162,7 @@ if __name__ == '__main__':
                                   'Set up your own deck by editing the spreadsheet.\n',
                                   'The Python source code is available from my',
                                   'GitHub repository.\n',
-                                  'Version 1.0 released July 1, 2019.\n\n'
+                                  'Version 1.1 released July 19, 2019.\n\n'
                                   'Jeffrey Neil Willits', '@jnwillits\n', no_titlebar=False, keep_on_top=True,
                                   grab_anywhere=True, background_color='#000000')
             elif event == 'Reset':
@@ -163,7 +174,7 @@ if __name__ == '__main__':
                 else:
                     sg.Popup('', 'All cards are archived. Use the menu to reset the deck',
                                  'to see them again.\n', no_titlebar=False, keep_on_top=True, grab_anywhere=True)
-            elif event == 'Update':
+            elif event == 'Next':
                 if len(active_cards) >= 1:
                     if show_front:
                         while True:
